@@ -52,10 +52,11 @@ export default function AboutUs() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=400%",
+          end: "+=300%",
           scrub: true,
           pin: true,
           anticipatePin: 1,
+          fastScroll: window.innerWidth < 768, // only enable fast scroll on mobile
         },
       });
 
@@ -120,3 +121,4 @@ export default function AboutUs() {
     </section>
   );
 }
+

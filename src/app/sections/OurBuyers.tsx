@@ -47,7 +47,7 @@ export default function OurBuyers() {
           {repeatedBuyers.map((buyer, index) => (
             <div
               key={index}
-              className="relative w-[40vw] md:w-[20vw] h-auto aspect-square flex-shrink-0 bg-white rounded-xl flex items-center justify-center p-4 md:p-10"
+              className="relative w-[30vw] md:w-[20vw] h-auto aspect-square flex-shrink-0 bg-white rounded-xl flex items-center justify-center p-4 md:p-10"
             >
               <Image
                 src={buyer.logo}

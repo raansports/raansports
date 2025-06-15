@@ -18,9 +18,11 @@ const HeroSection = () => {
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=400%",
+        end: "+=100%",
         scrub: true,
         pin: true,
+        // Make scroll fast on phone only
+        fastScroll: window.innerWidth < 768,
       });
 
       gsap.to(".halftone", {
@@ -28,7 +30,7 @@ const HeroSection = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=400%",
+          end: "+=200%",
           scrub: true,
         },
       });
@@ -42,6 +44,8 @@ const HeroSection = () => {
           start: "top top",
           end: `+=${100 * slides.length}%`,
           scrub: true,
+          // Make scroll fast on phone only
+          fastScroll: window.innerWidth < 768,
         },
       });
     }, sectionRef);
@@ -77,7 +81,7 @@ const HeroSection = () => {
       >
         {slides.map((src, index) => (
           <div key={index} className="slide h-[20%] md:h-[60%] w-auto flex-shrink-0 relative m-2 aspect-video ">
-            <Image src={src} alt={`Slide ${index + 1}`} fill className="object-cover rounded-4xl border-4 border-white " />
+            <Image src={src} alt={`Slide ${index + 1}`} fill className="object-cover rounded-2xl md:rounded-4xl border-4 border-blue-700 " />
           </div>
         ))}
       </div>
@@ -86,3 +90,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
