@@ -10,7 +10,7 @@ const HeroSection = () => {
   const sectionRef = useRef(null);
   const imagesWrapperRef = useRef(null);
 
-  const slides = ["/assets/H1.png", "/assets/H2.png", "/assets/H3.png", "/assets/H4.png"];
+  const slides = ["/assets/H1.png", "/assets/H2.png", "/assets/H3.png", "/assets/H4.jpg"];
 
   useEffect(() => {
     const ctx = gsap.context(() => {

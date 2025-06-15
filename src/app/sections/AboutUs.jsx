@@ -52,7 +52,7 @@ export default function AboutUs() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=500%",
+          end: "+=400%",
           scrub: true,
           pin: true,
           anticipatePin: 1,
@@ -103,7 +103,9 @@ export default function AboutUs() {
         className="absolute inset-0 flex md:flex-row flex-col justify-around items-center w-full text-center md:text-left px-6 md:px-0"
         style={{ pointerEvents: "none" }}
       >
-        <div className="flex md:flex-row flex-col justify-around items-center bg-neutral-200 shadow-xl p-20 h-full w-full ">
+        <div
+          className="flex md:flex-row flex-col justify-around items-center bg-cover bg-center bg-no-repeat shadow-xl p-20 h-full w-full backdrop-blur-3xl bg-[url('/assets/M1.png')] bg-blend-overlay relative"
+        >
           <h1 className="text-7xl md:text-9xl mb-6 max w-[40%]">
             Mission & Vision
           </h1>

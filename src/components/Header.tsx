@@ -10,7 +10,7 @@ import Logo from "../../public/logo/Logo.png";
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About Us" },
-  { href: "#mission", label: "Our Mission" },
+  { href: "#ourbuyers", label: "Our Buyers" },
   { href: "#products", label: "Products" },
   { href: "#contact", label: "Contact Us" },
 ];

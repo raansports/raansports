@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import HeroSection from "./sections/HeroSection";
 import Products from "./sections/Products";
 import AboutUs from "./sections/AboutUs";
-import MissionVision from "./sections/Customer";
+import MissionVision from "./sections/OurBuyers";
 import ContactUs from "./sections/ContactUs";
 
 const sectionVariants = {
@@ -23,7 +23,7 @@ export default function Home() {
       <AboutUs />
 
       <motion.section
-        id="mission"
+        id="ourbuyers"
         className="h-screen snap-start flex justify-center items-center"
         initial="hidden"
         whileInView="visible"
