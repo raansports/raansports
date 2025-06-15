@@ -42,12 +42,12 @@ export default function OurBuyers() {
       <div className="relative w-full overflow-hidden">
         <div
           ref={marqueeRef}
-          className="flex whitespace-nowrap w-max gap-10 px-10"
+          className="flex whitespace-nowrap w-max gap-4 px-10"
         >
           {repeatedBuyers.map((buyer, index) => (
             <div
               key={index}
-              className="relative w-[20vw] h-auto aspect-square flex-shrink-0 bg-white rounded-xl shadow-md flex items-center justify-center p-10"
+              className="relative w-[40vw] md:w-[20vw] h-auto aspect-square flex-shrink-0 bg-white rounded-xl flex items-center justify-center p-4 md:p-10"
             >
               <Image
                 src={buyer.logo}
