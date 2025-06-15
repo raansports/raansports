@@ -84,7 +84,12 @@ body {
   font-family: "Max";
 }
 
-
+.headingText {
+  font-family: "Max";
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: clamp(4rem, 10vw, 8rem);
+  color: #ffffff;
+}
 
 
 /* Swiper base styles */

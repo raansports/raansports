@@ -18,7 +18,7 @@ const HeroSection = () => {
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=100%",
+        end: "+=400%",
         scrub: true,
         pin: true,
         // Make scroll fast on phone only
@@ -30,7 +30,7 @@ const HeroSection = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=200%",
+          end: "+=400%",
           scrub: true,
         },
       });
@@ -66,10 +66,10 @@ const HeroSection = () => {
       <div id="overlay" className="absolute w-full h-full z-[100] overlay" />
 
       {/* Text content */}
-      <div className="absolute z-20 top-60 md:top-10 left-0 w-full h-full flex flex-col md:flex-row items-center justify-start ">
+      <div className="absolute z-20 top-50 md:top-10 left-0 w-full h-full flex flex-col md:flex-row items-center justify-start ">
         <div className="md:p-16 text-center md:text-left w-full md:w-1/2 text-white">
-          <h1 className="text-7xl md:text-[8rem] font-bold max">RAAN SPORTS KNITWEAR LTD.</h1>
-          <p className="text-xl md:text-2xl mt-4">A 100% Export Oriented Knit Garment</p>
+          <h1 className="font-bold max headingText">RAAN SPORTS KNITWEAR LTD.</h1>
+          <p className="text-md md:text-2xl mt-4">A 100% Export Oriented Knit Garment</p>
         </div>
       </div>
 
@@ -81,7 +81,7 @@ const HeroSection = () => {
       >
         {slides.map((src, index) => (
           <div key={index} className="slide h-[20%] md:h-[60%] w-auto flex-shrink-0 relative m-2 aspect-video ">
-            <Image src={src} alt={`Slide ${index + 1}`} fill className="object-cover rounded-2xl md:rounded-4xl border-4 border-blue-700 " />
+            <Image src={src} alt={`Slide ${index + 1}`} fill className="object-cover rounded-2xl md:rounded-4xl border-4 border-blue-300 " />
           </div>
         ))}
       </div>
