@@ -87,10 +87,10 @@ export default function AboutUs() {
       {/* About Us content */}
       <div
         ref={aboutRef}
-        className="absolute inset-0 flex md:flex-row flex-col justify-around items-center w-full text-center md:text-left px-6 md:px-0"
+        className="absolute inset-0 flex md:flex-row flex-col justify-center md:justify-around items-center w-full text-center md:text-left px-6 md:px-0"
       >
         <h1 className="text-7xl md:text-9xl mb-6 max">About Us</h1>
-        <div className="space-y-6 text-xs md:text-xl leading-6 md:leading-8 text-justify max-w-3xl mx-auto md:mx-0">
+        <div className="space-y-6 text-xs md:text-xl w-[90%] leading-6 md:leading-8 text-justify max-w-3xl mx-auto md:mx-0">
           {aboutContent.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -100,16 +100,17 @@ export default function AboutUs() {
       {/* Mission & Vision content */}
       <div
         ref={missionRef}
-        className="absolute inset-0 flex md:flex-row flex-col justify-around items-center w-full text-center md:text-left px-6 md:px-0"
+        className="absolute inset-0 flex md:flex-row flex-col justify-center md:justify-around items-center w-full text-center md:text-left px-0 md:px-0"
         style={{ pointerEvents: "none" }}
       >
         <div
-          className="flex md:flex-row flex-col justify-around items-center bg-cover bg-center bg-no-repeat shadow-xl p-20 h-full w-full backdrop-blur-3xl bg-[url('/assets/M1.png')] bg-blend-overlay relative"
+          className="flex md:flex-row flex-col justify-center md:justify-around items-center w-full h-full text-center md:text-left px-6 md:px-0 relative AboutUsBG"
         >
-          <h1 className="text-7xl md:text-9xl mb-6 max w-[40%]">
-            Mission & Vision
+          <div className="overlayWhite"></div>
+          <h1 className="text-7xl md:text-9xl mb-6 max ">
+            Mission & <br/> Vision
           </h1>
-          <div className="space-y-6 w-[50%] text-xs md:text-xl leading-6 md:leading-8 text-justify">
+          <div className="space-y-0 md:space-y-6 w-[90%] md:w-[50%] text-xs md:text-xl leading-6 md:leading-8 text-justify">
             {missionContent.paragraphs.map((p, i) => (
               <p className="" key={i}>{p}</p>
             ))}
