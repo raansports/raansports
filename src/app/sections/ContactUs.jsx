@@ -17,17 +17,16 @@ function ContactUs() {
             <span className="mr-4 material-symbols-outlined">
               email
             </span>
-            <p>hello@raansports.com</p>
+            <p>raansports@gmail.com</p>
           </div>
           <div className="flex items-center">
             <Phone className="mr-4" size={24} />
-            <p>+880 1711 111 222</p>
+            <p>+880 1818 426 501</p>
           </div>
           <div className="flex items-center">
             <MapPin className="mr-4" size={24} />
             <p>Raan Sports Knit Wear Ltd. <br />
-            House-14, Road-11, Sector-4, <br />
-            Uttara, Dhaka-1230, Bangladesh</p>
+            Plot- B/167-168, BSCIC- I/A, Sashongaon, <br /> Fatullah, Narayanganj, Bangladesh</p>
           </div>
         </div>
       </div>
