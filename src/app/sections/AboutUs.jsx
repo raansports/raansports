@@ -52,11 +52,11 @@ export default function AboutUs() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=300%",
+          end: "+=400%",
           scrub: true,
           pin: true,
           anticipatePin: 1,
-          fastScroll: window.innerWidth < 768, // only enable fast scroll on mobile
+          fastScroll: window.innerWidth < 768, 
         },
       });
 
@@ -66,8 +66,8 @@ export default function AboutUs() {
       // Animate Mission fade in and slide from right
       tl.fromTo(
         missionRef.current,
-        { x: 5000 },
-        { x: 0, ease: "none" }, 0
+        { x: 5000, opacity: 0 },
+        { x: 0, opacity: 1, ease: "power2.inOut" }, 0
       );
 
       return () => {
