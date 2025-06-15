@@ -72,7 +72,7 @@ const HeroSection = () => {
       {/* Right-side slideshow */}
       <div
         ref={imagesWrapperRef}
-        className="absolute top-150 md:top-50 right-60 w-1/3 h-full flex z-[300]"
+        className="absolute bottom-10 md:bottom-0 transform translate-y-120 md:translate-y-50 right-60 w-1/3 h-full flex z-[300]"
         style={{ willChange: "transform" }}
       >
         {slides.map((src, index) => (
