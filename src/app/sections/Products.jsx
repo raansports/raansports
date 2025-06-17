@@ -44,6 +44,7 @@ const Products = () => {
 
   return (
     <section
+      id="products"
       ref={sectionRef}
       className="py-20 px-4 md:px-10 lg:px-20 bg-gray-100"
     >

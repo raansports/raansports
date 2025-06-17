@@ -13,48 +13,59 @@ const HeroSection = () => {
   const slides = ["/assets/H1.png", "/assets/H2.png", "/assets/H3.png", "/assets/H4.jpg"];
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Pin the whole Hero section
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "+=400%",
-        scrub: true,
-        pin: true,
-        // Make scroll fast on phone only
-        fastScroll: window.innerWidth < 768,
-      });
+    const isMobile = window.innerWidth < 768;
 
-      gsap.to(".halftone", {
-        backdropFilter: "blur(50px)",
-        scrollTrigger: {
+    const ctx = gsap.context(() => {
+      if (isMobile) {
+        // Looping image scroll for mobile
+        gsap.to(imagesWrapperRef.current, {
+          xPercent: -100 * (slides.length - 1),
+          duration: 10,
+          ease: "linear",
+          repeat: -1,
+        });
+      } else {
+        // Desktop: scroll-based pin and image slide
+        ScrollTrigger.create({
           trigger: sectionRef.current,
           start: "top top",
           end: "+=400%",
           scrub: true,
-        },
-      });
+          pin: true,
+        });
 
-      // Slide images one-by-one
-      gsap.to(".slide", {
-        xPercent: -120 * (slides.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: imagesWrapperRef.current,
-          start: "top top",
-          end: `+=${100 * slides.length}%`,
-          scrub: true,
-          // Make scroll fast on phone only
-          fastScroll: window.innerWidth < 768,
-        },
-      });
+        gsap.to(".halftone", {
+          backdropFilter: "blur(50px)",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "+=400%",
+            scrub: true,
+          },
+        });
+
+        gsap.to(".slide", {
+          xPercent: -120 * (slides.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: imagesWrapperRef.current,
+            start: "top top",
+            end: `+=${100 * slides.length}%`,
+            scrub: true,
+          },
+        });
+      }
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} id="home" className="relative w-full h-screen overflow-hidden snap-start scroll-smooth">
+    <section
+      ref={sectionRef}
+      id="home"
+      className="relative w-full h-screen overflow-hidden snap-start scroll-smooth"
+    >
       {/* Background */}
       <Image
         src="/assets/H3.png"
@@ -80,8 +91,16 @@ const HeroSection = () => {
         style={{ willChange: "transform" }}
       >
         {slides.map((src, index) => (
-          <div key={index} className="slide h-[20%] md:h-[60%] w-auto flex-shrink-0 relative m-2 aspect-video ">
-            <Image src={src} alt={`Slide ${index + 1}`} fill className="object-cover rounded-2xl md:rounded-4xl border-4 border-blue-300 " />
+          <div
+            key={index}
+            className="slide h-[20%] md:h-[60%] w-auto flex-shrink-0 relative m-2 aspect-video"
+          >
+            <Image
+              src={src}
+              alt={`Slide ${index + 1}`}
+              fill
+              className="object-cover rounded-2xl md:rounded-4xl border-4 border-blue-300"
+            />
           </div>
         ))}
       </div>
@@ -90,4 +109,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
