@@ -62,7 +62,7 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`top-0 z-[12000] w-full ${
-        small ? "p-2 sticky backdrop-blur-md bg-[rgba(255,255,255,0.6)]" : "fixed bg-white border-b-5 border-yellow-600"
+        small ? "sticky p-4" : "fixed bg-white border-b-5 border-yellow-600"
       } transition-all duration-300`}
     >
       <motion.div
@@ -71,7 +71,7 @@ function Header() {
           borderRadius: small ? "5rem" : "0rem",
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`flex items-center justify-between w-full px-6 md:px-10 py-2`}
+        className={`flex items-center justify-between w-full px-6 py-20 md:px-10 md:py-4 ${small ? "backdrop-blur-3xl rounded-3xl bg-[rgba(255,255,255,0.26)] " : ""}`}
       >
         <Link href="/" onClick={() => handleLinkClick("#home")}>
           <Image
@@ -79,7 +79,7 @@ function Header() {
             alt="Logo"
             width={small ? 60 : 100}
             height={small ? 60 : 100}
-            className="transition-all duration-300"
+            className={`transition-all duration-300 ${small ? "m-2 " : "m-0"}`}
           />
         </Link>
 
@@ -92,7 +92,7 @@ function Header() {
                 scroll={false}
                 onClick={() => handleLinkClick(href)}
                 className={`hover:font-bold ${
-                  activeSection === href.slice(1) ? "text-amber-600 font-bold" : "text-gray-800"
+                  activeSection === href.slice(1) ? "text-amber-600 font-bold" : "text-neutral-400"
                 } transition-colors duration-300`}
               >
                 {label}
@@ -118,7 +118,7 @@ function Header() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed top-20 left-0 right-0 bg-white z-[11999] shadow-md px-6 py-4 space-y-4"
+            className="md:hidden fixed top-12 left-0 right-0 bg-[rgba(255,255,255,2)] z-[11999] shadow-md px-6 py-4 space-y-4 m-4 rounded-2xl"
           >
             {links.map(({ href, label }) => (
               <li key={href}>
