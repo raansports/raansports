@@ -1,9 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import HeroSection from "./sections/HeroSection";
-import Products from "./sections/Products";
 import AboutUs from "./sections/AboutUs";
-import MissionVision from "./sections/OurBuyers";
+import OurService from "./sections/OurService";
+import OurBuyers from "./sections/OurBuyers";
+import Products from "./sections/Products";
+import Quality from "./sections/Quality";
+import Productions from "./sections/Productions";
+import Sustainability from "./sections/Sustainability";
 import ContactUs from "./sections/ContactUs";
 
 const sectionVariants = {
@@ -22,6 +26,8 @@ export default function Home() {
 
       <AboutUs />
 
+      <OurService />
+
       <motion.section
         id="ourbuyers"
         className="h-screen snap-start flex justify-center items-center"
@@ -30,7 +36,7 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3 }}
         variants={sectionVariants}
       >
-        <MissionVision />
+        <OurBuyers />
       </motion.section>
 
       <motion.section
@@ -42,6 +48,30 @@ export default function Home() {
         variants={sectionVariants}
       >
         <Products />
+      </motion.section>
+
+      <motion.section
+        id="quality"
+        className="h-screen snap-start flex justify-center items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <Quality />
+      </motion.section>
+
+      <Productions />
+
+      <motion.section
+        id="sustainability"
+        className="h-screen snap-start flex justify-center items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
+      >
+        <Sustainability />
       </motion.section>
 
       <motion.section
