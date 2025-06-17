@@ -70,17 +70,6 @@ export default function Productions() {
           start: "top 80%",
         },
       });
-
-      gsap.from(".phase-card", {
-        opacity: 0,
-        y: 50,
-        duration: 0.6,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: ".phase-grid",
-          start: "top 75%",
-        },
-      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -95,15 +84,15 @@ export default function Productions() {
       className=" bg-white px-6 md:px-20 py-28 snap-start"
       id="productions"
     >
-      <h1 className="text-4xl md:text-9xl font-bold text-center text-gray-800 max">
+      <h1 className="text-6xl md:text-9xl font-bold text-center text-gray-800 max">
         Production
       </h1>
 
       {/* Timeline Section */}
-      <h2 className="text-2xl text-center font-semibold text-gray-700 mb-20">
+      <h2 className="text-sm md:text-2xl text-center font-semibold text-gray-700 mb-20">
         From Concept to Completion
       </h2>
-      <div className="relative border-l-4 border-blue-600 pl-8 space-y-12 max-w-3xl mx-auto mb-24">
+      <div className="relative border-l-4 border-neutral-200 pl-8 space-y-12 max-w-3xl mx-auto mb-24">
         {processSteps.map((step, i) => (
           <div key={i} className="timeline-step relative">
             <div className="absolute -left-6 top-0  text-white w-12 h-12 rounded-full flex items-center justify-center">
@@ -126,26 +115,40 @@ export default function Productions() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6"
+      >
         {productionPhases.map((phase, i) => (
-          <div
+          <motion.div
             key={i}
-            className="relative bg-white shadow-md rounded-lg overflow-hidden"
+            className="relative bg-white shadow-md rounded-2xl border-4 border-gray-300 phase-card overflow-hidden hover:scale-105 transition duration-300"
           >
             <Image
               src={phase.image}
               alt={phase.label}
               width={400}
               height={250}
-              className="object-cover w-full h-[150px] md:h-[256px]"
+              className="object-cover w-full h-[150px] md:h-[256px] z-[0]"
             />
-            <div className="absolute bottom-0 left-0 w-full p-4 text-center text-lg font-semibold text-gray-800">
+            <div className="absolute bottom-0 left-0 w-full p-4 text-center text-xl font-semibold text-white z-[20]">
               {phase.label}
             </div>
-            
-          </div>
+            <div className="absolute top-0 left-0 w-full h-full gradient-blur">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }
+

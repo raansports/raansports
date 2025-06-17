@@ -86,7 +86,7 @@ export default function OurServices() {
           {services.map((service, i) => (
             <motion.div
               key={i}
-              className="fade-card bg-neutral-100 shadow-md p-6 rounded-xl flex flex-col items-center text-center"
+              className="fade-card bg-neutral-100 p-6 rounded-xl flex flex-col items-center text-center"
             >
               {service.icon}
               <h4 className="font-bold text-xl mt-4 mb-2">{service.title}</h4>
@@ -103,7 +103,7 @@ export default function OurServices() {
           {garments.map((garment, i) => (
             <motion.div
               key={i}
-              className="fade-card bg-neutral-100 shadow-md p-6 rounded-xl flex flex-col items-center text-center"
+              className="fade-card bg-neutral-100 p-6 rounded-xl flex flex-col items-center text-center"
             >
               {garment.icon}
               <h4 className="font-bold text-xl mt-4 mb-2">{garment.title}</h4>

@@ -108,10 +108,10 @@ export default function AboutUs() {
           className="flex md:flex-row flex-col justify-center md:justify-around items-center w-full h-full text-center md:text-left px-6 md:px-0 relative AboutUsBG"
         >
           <div className="overlayWhite"></div>
-          <h1 className="text-7xl md:text-9xl mb-6 max ">
+          <h1 className="text-7xl md:text-9xl mb-6 max text-white">
             Mission & <br/> Vision
           </h1>
-          <div className="space-y-0 md:space-y-6 w-[90%] md:w-[50%] text-xs md:text-xl leading-5 md:leading-8 text-justify">
+          <div className="space-y-0 md:space-y-6 w-[90%] md:w-[50%] text-xs md:text-xl leading-5 md:leading-8 text-white text-justify">
             {missionContent.paragraphs.map((p, i) => (
               <p className="" key={i}>{p}</p>
             ))}

@@ -39,44 +39,17 @@ export default function Home() {
         <OurBuyers />
       </motion.section>
 
-      <motion.section
-        id="products"
-        className="h-screen snap-start flex justify-center items-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <Products />
-      </motion.section>
+      <Products />
 
-      <motion.section
-        id="quality"
-        className="h-screen snap-start flex justify-center items-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <Quality />
-      </motion.section>
+      <Quality />
 
       <Productions />
 
-      <motion.section
-        id="sustainability"
-        className="h-screen snap-start flex justify-center items-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <Sustainability />
-      </motion.section>
+      <Sustainability />
 
       <motion.section
         id="contact"
-        className="h-screen snap-start flex justify-center items-center"
+        className="h-auto snap-start flex justify-center items-center mt-28"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
