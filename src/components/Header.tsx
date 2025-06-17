@@ -8,11 +8,15 @@ import { Menu, X } from "lucide-react"; // Icons for hamburger
 import Logo from "../../public/logo/Logo.png";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#ourbuyers", label: "Our Buyers" },
+  { href: "#home", label: "Home" }, //done
+  { href: "#about", label: "About Us" }, //done
+  { href: "#services", label: "Our Services" },
+  { href: "#ourbuyers", label: "Our Buyers" }, //done
   { href: "#products", label: "Products" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "#quality", label: "Quality" },
+  { href: "#productions", label: "Productions" },
+  { href: "#sustainability", label: "Sustainability" },
+  { href: "#contact", label: "Contact Us" }, //almost done
 ];
 
 function Header() {
@@ -58,25 +62,23 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`top-0 z-[12000] w-full ${
-        small ? "p-2 sticky" : "fixed bg-white border-b-5 border-yellow-600"
+        small ? "p-2 sticky backdrop-blur-md bg-[rgba(255,255,255,0.6)]" : "fixed bg-white border-b-5 border-yellow-600"
       } transition-all duration-300`}
     >
       <motion.div
         animate={{
-          padding: small ? "0.5rem 1.5rem" : "0.75rem 2rem",
+          padding: small ? "0rem 1.5rem" : "0.75rem 2rem",
           borderRadius: small ? "5rem" : "0rem",
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`flex items-center justify-between w-full px-6 md:px-10 py-5 ${
-          small ? "backdrop-blur-md bg-[rgba(240,240,240,0.75)]" : ""
-        }`}
+        className={`flex items-center justify-between w-full px-6 md:px-10 py-2`}
       >
         <Link href="/" onClick={() => handleLinkClick("#home")}>
           <Image
             src={Logo}
             alt="Logo"
-            width={small ? 50 : 100}
-            height={small ? 50 : 100}
+            width={small ? 60 : 100}
+            height={small ? 60 : 100}
             className="transition-all duration-300"
           />
         </Link>
