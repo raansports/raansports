@@ -92,7 +92,7 @@ function Header() {
                 scroll={false}
                 onClick={() => handleLinkClick(href)}
                 className={`hover:font-bold ${
-                  activeSection === href.slice(1) ? "text-blue-600 font-bold" : "text-gray-800"
+                  activeSection === href.slice(1) ? "text-amber-600 font-bold" : "text-gray-800"
                 } transition-colors duration-300`}
               >
                 {label}
