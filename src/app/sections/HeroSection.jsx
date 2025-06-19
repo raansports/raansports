@@ -20,7 +20,7 @@ const HeroSection = () => {
         // Looping image scroll for mobile
         gsap.to(imagesWrapperRef.current, {
           xPercent: -100 * (slides.length - 1),
-          duration: 10,
+          duration: 4,
           ease: "linear",
           repeat: -1,
         });
@@ -39,7 +39,7 @@ const HeroSection = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
-            end: "+=400%",
+            end: "+=200%",
             scrub: true,
           },
         });

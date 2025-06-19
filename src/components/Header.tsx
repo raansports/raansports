@@ -62,7 +62,7 @@ function Header() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`top-0 z-[12000] w-full ${
+      className={`top-0 z-[10000] w-full ${
         small ? "sticky p-4" : "fixed bg-white border-b-5 border-yellow-600"
       } transition-all duration-300`}
     >
@@ -105,7 +105,7 @@ function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-800 z-[12001]"
+          className="md:hidden text-gray-800 z-[10001]"
         >
           {menuOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
@@ -119,7 +119,7 @@ function Header() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed top-12 left-0 right-0 bg-[rgba(255,255,255,2)] z-[11999] shadow-md px-6 py-4 space-y-4 m-4 rounded-2xl"
+            className="md:hidden fixed top-15 left-0 right-0 bg-[rgba(255,255,255,2)] z-[11999] shadow-md px-6 py-4 space-y-4 m-4 rounded-2xl"
           >
             {links.map(({ href, label }) => (
               <li key={href}>
@@ -128,7 +128,7 @@ function Header() {
                   scroll={false}
                   onClick={() => handleLinkClick(href)}
                   className={`block text-lg ${
-                    activeSection === href.slice(1) ? "text-blue-600 font-bold" : "text-gray-800"
+                    activeSection === href.slice(1) ? "text-amber-600 font-bold" : "text-gray-800"
                   }`}
                 >
                   {label}
