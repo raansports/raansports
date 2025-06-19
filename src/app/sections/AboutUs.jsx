@@ -52,22 +52,27 @@ export default function AboutUs() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: "+=400%",
-          scrub: true,
+          end: "bottom top", // Transition completes when section bottom hits viewport top
+          scrub: 1,
           pin: true,
           anticipatePin: 1,
-          fastScroll: window.innerWidth < 768, 
         },
       });
 
-      // Animate About Us fade out and slide left
-      tl.to(aboutRef.current, { x: 0, ease: "none" }, 0.25);
+      // Slide About Us up and fade out
+      tl.to(aboutRef.current, {
+        y: "0%",
+        opacity: 1,
+        ease: "power2.out",
+        duration: 0.5,
+      });
 
-      // Animate Mission fade in and slide from right
+      // Slide Mission & Vision up from below
       tl.fromTo(
         missionRef.current,
-        { x: 5000, opacity: 0 },
-        { x: 0, opacity: 1, ease: "power2.inOut" }, 0
+        { y: "100%", opacity: 0 },
+        { y: "0%", opacity: 1, ease: "power2.out", duration: 1 },
+        "-=0.2" // Slight overlap for smooth transition
       );
 
       return () => {
@@ -83,15 +88,15 @@ export default function AboutUs() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative h-screen w-full bg-white flex items-center justify-center p-10 md:p-20 overflow-hidden"
+      className="relative h-screen w-full bg-white flex items-center justify-center p-6 md:p-12 overflow-hidden snap-start"
     >
       {/* About Us content */}
       <div
         ref={aboutRef}
-        className="absolute inset-0 flex md:flex-row flex-col justify-center md:justify-around items-center w-full text-center md:text-left px-6 md:px-0"
+        className="absolute inset-0 flex flex-col md:flex-row justify-center md:justify-around items-center w-full text-center md:text-left px-4 md:px-8 gap-4"
       >
-        <h1 className="text-7xl md:text-9xl mb-6 max">About Us</h1>
-        <div className="space-y-6 text-xs md:text-xl w-[90%] leading-5 md:leading-8 text-justify max-w-3xl mx-auto md:mx-0">
+        <h1 className="text-6xl md:text-9xl font-bold mb-4 md:mb-0 max">About Us</h1>
+        <div className="space-y-4 text-xs md:text-lg w-4/5 md:w-1/2 leading-4 md:leading-8 text-justify max-w-2xl">
           {aboutContent.paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -100,20 +105,17 @@ export default function AboutUs() {
 
       {/* Mission & Vision content */}
       <div
+        id="mission"
         ref={missionRef}
-        className="absolute inset-0 flex md:flex-row flex-col justify-center md:justify-around items-center w-full text-center md:text-left px-0 md:px-0"
-        style={{ pointerEvents: "none" }}
+        className="absolute inset-0 flex flex-col md:flex-row justify-center md:justify-between items-center w-full text-center md:text-left px-0 md:px-0 snap-start"
       >
-        <div
-          className="flex md:flex-row flex-col justify-center md:justify-around items-center w-full h-full text-center md:text-left px-6 md:px-0 relative AboutUsBG"
-        >
-          <div className="overlayWhite"></div>
-          <h1 className="text-7xl md:text-9xl mb-6 max text-white">
+        <div className="relative w-full h-full flex flex-col md:flex-row justify-center md:justify-around items-center bg-gray-900 bg-opacity-90 p-6 md:p-12 gap-2">
+          <h1 className="text-6xl md:text-9xl font-bold mb-4 md:mb-0 text-white max">
             Mission & <br/> Vision
           </h1>
-          <div className="space-y-0 md:space-y-6 w-[90%] md:w-[50%] text-xs md:text-xl leading-5 md:leading-8 text-white text-justify">
+          <div className="space-y-4 text-xs md:text-lg w-4/5 md:w-1/2 leading-4 md:leading-8 text-white text-justify max-w-2xl">
             {missionContent.paragraphs.map((p, i) => (
-              <p className="" key={i}>{p}</p>
+              <p key={i}>{p}</p>
             ))}
           </div>
         </div>
@@ -121,4 +123,3 @@ export default function AboutUs() {
     </section>
   );
 }
-
