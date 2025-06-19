@@ -70,7 +70,7 @@ export default function OurServices() {
       className="min-h-screen bg-white px-6 md:px-20 py-28 snap-start"
     >
       <motion.h2
-        className="text-4xl md:text-9xl font-bold mb-16 text-center text-gray-800 max"
+        className="text-7xl md:text-9xl font-bold mb-16 text-center text-gray-800 max"
         initial={{ y: -40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -81,8 +81,8 @@ export default function OurServices() {
 
       {/* Services Offered */}
       <div className="mb-20">
-        <h3 className="text-2xl font-semibold mb-8 text-gray-700 text-center">What We Offer</h3>
-        <div className="grid md:grid-cols-3 gap-8">
+        <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">What We Offer</h3>
+        <div className="grid md:grid-cols-3 gap-2 md:gap-8">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -98,8 +98,8 @@ export default function OurServices() {
 
       {/* Garment Types */}
       <div className="mb-20">
-        <h3 className="text-2xl font-semibold mb-8 text-gray-700 text-center">Types of Garments</h3>
-        <div className="grid md:grid-cols-3 gap-8">
+        <h3 className="text-2xl font-semibold mb-4 text-gray-700 text-center">Types of Garments</h3>
+        <div className="grid md:grid-cols-3 gap-2 md:gap-8">
           {garments.map((garment, i) => (
             <motion.div
               key={i}

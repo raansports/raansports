@@ -64,7 +64,7 @@ const HeroSection = () => {
     <section
       ref={sectionRef}
       id="home"
-      className="relative w-full h-screen overflow-hidden snap-start scroll-smooth"
+      className="relative w-full h-screen overflow-hidden snap-start"
     >
       {/* Background */}
       <Image
