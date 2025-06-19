@@ -21,7 +21,7 @@
 
 @layer base {
   html, body {
-    @apply scroll-smooth snap-y snap-start snap-mandatory;
+    @apply scroll-smooth snap-y snap-start snap-mandatory ;
   }
 }
 
@@ -42,6 +42,7 @@ body {
   overscroll-behavior: contain;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  
 }
 
 .center{

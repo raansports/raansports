@@ -1,7 +1,12 @@
 "use client";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaTools, FaUserShield, FaClock, FaLightbulb } from "react-icons/fa";
 import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const certificates = [
   "/Certificates/BCI.png",
@@ -41,8 +46,31 @@ const qualityPoints = [
 ];
 
 export default function Quality() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+      const elements = sectionRef.current.querySelectorAll(".fade-in");
+  
+      elements.forEach((el, index) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: index * 0.2,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 120%",
+            },
+          }
+        );
+      });
+    }, []);
+
   return (
-    <section id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28 snap-start">
+    <section ref={sectionRef} id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28 snap-start">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,18 +109,18 @@ export default function Quality() {
         transition={{ duration: 0.6 }}
       >
         <h3 className="text-2xl md:text-4xl font-bold text-center text-gray-700 mb-4">Our Certifications</h3>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 justify-center items-center px-6 w-full">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 justify-center items-center px-0 md:px-6 w-full">
           {certificates.map((src, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex justify-center p-1 md:p-5 overflow-hidden rounded-2xl transition-all duration-300 "
+                className="flex justify-center p-1 md:p-5 overflow-hidden rounded-2xl transition-all duration-300"
               >
                 <img
                   src={src}
                   alt={`Certificate ${idx + 1}`}
-                  className="h-full md:h-30 object-contain hover:scale-105 transition-transform duration-300"
+                  className="h-auto md:h-30 object-contain hover:scale-105 transition-transform duration-300"
                 />
               </motion.div>
             ))}
