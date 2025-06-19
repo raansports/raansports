@@ -34,10 +34,10 @@ const Sustainability = () => {
     <section
       id="sustainability"
       ref={sectionRef}
-      className="center flex flex-col h-auto md:h-screen  py-20 px-4 md:px-10 lg:px-20 pt-28 snap-start"
+      className="center flex flex-col h-auto min-h-screen px-4 md:px-10 lg:px-20 pt-28 snap-start "
     >
       <div className="max-w-[1240px] mx-auto text-center mb-10 fade-in ">
-        <h2 className="text-2xl md:text-9xl font-bold text-gray-800 mb-4 max">
+        <h2 className="text-6xl md:text-9xl font-bold text-blue-950 mb-4 max">
           Sustainability & Ethics
         </h2>
         <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto">
@@ -47,7 +47,7 @@ const Sustainability = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 fade-in">
+      <div className="grid md:grid-cols-2 gap-2 md:gap-8 fade-in">
         {/* Item 1 */}
         <div className="bg-neutral-100 rounded-3xl p-6 flex items-start space-x-4 ">
           <div>

@@ -49,17 +49,8 @@ export default function Home() {
       <Productions />
 
       <Sustainability />
-
-      <motion.section
-        id="contact"
-        className="h-auto snap-start flex justify-center items-center mt-28"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <ContactUs />
-      </motion.section>
+      
+      <ContactUs />
     </>
   );
 }

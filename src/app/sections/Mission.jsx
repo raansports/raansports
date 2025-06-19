@@ -43,7 +43,7 @@ export default function Mission() {
     <section
       ref={sectionRef}
       id="mission"
-      className="min-h-screen md:h-screen snap-start bg-neutral-00  py-20 px-6 md:px-20 flex md:flex-row flex-col items-center gap-12 pt-28"
+      className="min-h-screen md:h-screen snap-start bg-neutral-00 py-20 px-6 md:px-20 flex md:flex-row flex-col items-center gap-12 pt-28 overflow-hidden"
     >
       <h2 className="text-6xl md:text-9xl font-bold text-center text-blue-950 max-w-4xl max">
         Mission & Vision

@@ -26,7 +26,7 @@ const Products = () => {
           delay: index * 0.1,
           scrollTrigger: {
             trigger: card,
-            start: "top 85%",
+            start: "top 100%",
           },
         }
       );
@@ -69,10 +69,10 @@ const Products = () => {
     <section
       id="products"
       ref={sectionRef}
-      className="min-h-screen  py-20 px-4 md:pt-28 lg:px-20  snap-start"
+      className="min-h-screen py-28 px-4 md:pt-28 lg:px-20  snap-start"
     >
       <div className="text-center mb-16">
-        <h2 className="text-6xl md:text-9xl font-extrabold text-gray-800 max mb-2">
+        <h2 className="text-6xl md:text-9xl font-extrabold text-blue-950 max mb-2">
           Our Products
         </h2>
         <p className="text-lg md:text-md text-gray-600 max-w-3xl mx-auto">
