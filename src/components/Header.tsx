@@ -62,7 +62,7 @@ function Header() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`top-0 z-[10000] w-full ${
+      className={`top-0 z-[11000] w-screen ${
         small ? "sticky p-4" : "fixed bg-white border-b-5 border-yellow-600"
       } transition-all duration-300`}
     >
@@ -119,7 +119,7 @@ function Header() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed top-15 left-0 right-0 bg-[rgba(255,255,255,2)] z-[11999] shadow-md px-6 py-4 space-y-4 m-4 rounded-2xl"
+            className={`md:hidden absolute top-15 left-0 right-0 bg-[rgba(255,255,255,0.5)] z-[10000] backdrop-blur-3xl shadow-md px-6 py-4 space-y-4 m-4 rounded-2xl ${small ? "top-15" : "top-20"}`}
           >
             {links.map(({ href, label }) => (
               <li key={href}>
