@@ -16,13 +16,13 @@ function ContactUs() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="h-full md:h-screen flex md:flex-row flex-col justify-center items-center mt-10"
+      className="h-full md:h-screen flex md:flex-row flex-col justify-center items-center mt-10 snap-start"
     >
       <div className="relative flex flex-col justify-center items-center h-full w-full px-4 py-0 md:py-4 md:px-4 overflow-hidden">
         <img
           src="/assets/contact.png"
           alt="Contact Us"
-          className="contactTone w-full md:h-[96%] h-[75%] object-cover rounded-2xl"
+          className="contactTone w-full md:h-[92%] h-[75%] object-cover rounded-2xl"
         />
         <h2 className="absolute text-6xl md:text-8xl font-bold max text-white">
           Contact Us

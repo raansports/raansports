@@ -21,11 +21,12 @@
 
 @layer base {
   html, body {
-    @apply scroll-smooth snap-y snap-start;
+    @apply scroll-smooth snap-y snap-start snap-mandatory;
   }
 }
 
 body {
+  position: relative;
   background: var(--background);
   color: var(--foreground);
   margin: 0 !important;
@@ -275,7 +276,7 @@ body {
   content: "";
   height: 40px;
   aspect-ratio: 3;
-  --c: #0000 64%,#000 66% 98%,#0000 101%;
+  --c: #ffffff00 64%,#ffffff 66% 98%,#ffffff00 101%;
   background:
     radial-gradient(35% 146% at 50% 159%,var(--c)) 0 0,
     radial-gradient(35% 146% at 50% -59%,var(--c)) 100% 100%;

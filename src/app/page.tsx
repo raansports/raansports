@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import HeroSection from "./sections/HeroSection";
 import AboutUs from "./sections/AboutUs";
+import Mission from "./sections/Mission";
 import OurService from "./sections/OurService";
 import OurBuyers from "./sections/OurBuyers";
 import Products from "./sections/Products";
@@ -25,6 +26,8 @@ export default function Home() {
       <HeroSection />
 
       <AboutUs />
+
+      <Mission/>
 
       <OurService />
 

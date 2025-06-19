@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className="bg-neutral-200 text-gray-700 mt-16">
+    <footer className="bg-neutral-200 text-gray-700 mt-16 snap-start">
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start p-10">
 
         {/* Logo and Description */}
@@ -39,7 +39,7 @@ function Footer() {
           </p>
           <div className="flex space-x-4 mt-4">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/people/Raan-Sports-Knit-Wear-Ltd/61576339863780/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full hover:bg-blue-500 transition"
@@ -47,7 +47,7 @@ function Footer() {
               <FaFacebookF className="text-blue-700 hover:text-white" />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/raan-sports-knit-wear-b1ab85353/?originalSubdomain=bd"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full hover:bg-blue-600 transition"
@@ -59,7 +59,7 @@ function Footer() {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="flex justify-center items-center mt-10 text-center text-sm border-t border-gray-300 bg-amber-600 p-4">
+      <div className="flex justify-center items-center mt-10 text-center text-sm border-t border-gray-300 bg-amber-400 p-4">
         <p>© {new Date().getFullYear()} Raan Sports Knit Wear Ltd. All rights reserved.</p>
       </div>
     </footer>

@@ -84,7 +84,7 @@ export default function Productions() {
       className=" bg-white px-6 md:px-20 py-28 snap-start"
       id="productions"
     >
-      <h1 className="text-6xl md:text-9xl font-bold text-center text-gray-800 max">
+      <h1 className="text-6xl md:text-9xl font-bold text-center text-blue-950 max">
         Production
       </h1>
 

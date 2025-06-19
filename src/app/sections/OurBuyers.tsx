@@ -4,7 +4,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 
 const buyers = [
-  { name: "Bontton", logo: "/Buyers/Bontton.jpeg" },
+  { name: "GATE", logo: "/Buyers/GATE.jpeg" },
   { name: "Colloky", logo: "/Buyers/Colloky.png" },
   { name: "Komex", logo: "/Buyers/Komex.webp" },
   { name: "Nautica", logo: "/Buyers/Nautica.png" },
@@ -32,11 +32,11 @@ export default function OurBuyers() {
     return () => ctx.revert();
   }, []);
 
-  const repeatedBuyers = [...buyers, ...buyers]; // Duplicate for seamless loop
+  const repeatedBuyers = [...buyers, ...buyers]; // Duplicate for loop
 
   return (
     <section className="flex flex-col justify-center items-center h-screen w-full py-16 bg-neutral-100" id="buyers">
-      <h2 className="text-4xl md:text-9xl font-bold text-center mb-10 text-gray-800 max">
+      <h2 className="text-4xl md:text-9xl font-bold text-center mb-10 text-blue-950 max">
         Our Buyers
       </h2>
       <div className="relative w-full overflow-hidden">

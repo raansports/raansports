@@ -42,14 +42,14 @@ const qualityPoints = [
 
 export default function Quality() {
   return (
-    <section id="quality" className="bg-neutral-100 py-16 px-6 md:px-16 snap-start pt-28">
+    <section id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28 snap-start">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-center mb-12"
       >
-        <h2 className="text-6xl md:text-9xl font-bold text-gray-800 mb-4 max">Quality Assurance</h2>
+        <h2 className="text-6xl md:text-9xl font-bold text-blue-950 mb-4 max">Quality Assurance</h2>
         <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto">
           At Raan Sports Knit Wear Ltd., we don’t just manufacture garments — we build trust, stitch by stitch.
         </p>

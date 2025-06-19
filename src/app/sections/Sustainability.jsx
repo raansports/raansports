@@ -34,9 +34,9 @@ const Sustainability = () => {
     <section
       id="sustainability"
       ref={sectionRef}
-      className="center flex flex-col h-auto md:h-screen bg-[#e7e7e7] py-20 px-4 md:px-10 lg:px-20 pt-28 snap-start"
+      className="center flex flex-col h-auto md:h-screen  py-20 px-4 md:px-10 lg:px-20 pt-28 snap-start"
     >
-      <div className="max-w-[1240px] mx-auto text-center mb-10 fade-in">
+      <div className="max-w-[1240px] mx-auto text-center mb-10 fade-in ">
         <h2 className="text-2xl md:text-9xl font-bold text-gray-800 mb-4 max">
           Sustainability & Ethics
         </h2>
@@ -49,7 +49,7 @@ const Sustainability = () => {
 
       <div className="grid md:grid-cols-2 gap-8 fade-in">
         {/* Item 1 */}
-        <div className="bg-white rounded-3xl p-6 flex items-start space-x-4">
+        <div className="bg-neutral-100 rounded-3xl p-6 flex items-start space-x-4 ">
           <div>
             <h4 className="text-xl font-semibold text-gray-800 mb-2 flex align-center gap-2">
           <FaLeaf className="text-green-500 text-2xl md:text-xl mt-1" />
@@ -63,7 +63,7 @@ const Sustainability = () => {
         </div>
 
         {/* Item 2 */}
-        <div className="bg-white rounded-3xl  p-6 flex items-start space-x-4">
+        <div className="bg-neutral-100 rounded-3xl  p-6 flex items-start space-x-4">
           <div>
             <h4 className="text-xl font-semibold text-gray-800 mb-2 flex align-center gap-2">
           <FaRecycle className="text-yellow-500 text-2xl md:text-xl mt-1" />
@@ -77,7 +77,7 @@ const Sustainability = () => {
         </div>
 
         {/* Item 3 */}
-        <div className="bg-white rounded-3xl  p-6 flex items-start space-x-4">
+        <div className="bg-neutral-100 rounded-3xl  p-6 flex items-start space-x-4">
           <div>
             <h4 className="text-xl font-semibold text-gray-800 mb-2 flex align-center gap-2">
           <FaHandsHelping className="text-blue-5002text-2xl md:text-xl mt-1" />
@@ -91,7 +91,7 @@ const Sustainability = () => {
         </div>
 
         {/* Item 4 */}
-        <div className="bg-white rounded-3xl  p-6 flex items-start space-x-4">
+        <div className="bg-neutral-100 rounded-3xl  p-6 flex items-start space-x-4">
           <div>
             <h4 className="text-xl font-semibold text-gray-800 mb-2 flex align-center gap-2">
           <FaShieldAlt className="text-purple-500 2ext-6xl md:text-xl mt-1" />
