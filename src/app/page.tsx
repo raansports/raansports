@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      {sections.map(({ id, Component }, i) => (
+      {sections.map(({ id, Component }) => (
         <motion.section
           key={id}
           id={id}
