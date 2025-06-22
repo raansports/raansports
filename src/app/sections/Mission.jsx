@@ -40,7 +40,7 @@ export default function Mission() {
   }, []);
 
   return (
-    <section
+    <div
       ref={sectionRef}
       id="mission"
       className="min-h-screen md:h-screen snap-start bg-neutral-00 py-20 px-6 md:px-20 flex md:flex-row flex-col items-center gap-12 pt-28 overflow-hidden"
@@ -78,6 +78,6 @@ export default function Mission() {
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -76,7 +76,7 @@ export default function Productions() {
   }, []);
 
   return (
-    <motion.section
+    <motion.div
       ref={sectionRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -148,7 +148,9 @@ export default function Productions() {
           </motion.div>
         ))}
       </motion.div>
-    </motion.section>
+
+      
+    </motion.div>
   );
 }
 

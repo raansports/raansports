@@ -61,10 +61,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section
+    <div
       ref={sectionRef}
       id="home"
-      className="relative w-full h-screen overflow-hidden snap-start"
+      className="relative w-full h-screen overflow-hidden"
     >
       {/* Background */}
       <Image
@@ -104,7 +104,7 @@ const HeroSection = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

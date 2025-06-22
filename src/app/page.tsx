@@ -7,50 +7,51 @@ import OurService from "./sections/OurService";
 import OurBuyers from "./sections/OurBuyers";
 import Products from "./sections/Products";
 import Quality from "./sections/Quality";
-import Productions from "./sections/Productions";
 import Sustainability from "./sections/Sustainability";
+import Management from "./sections/Management";
 import ContactUs from "./sections/ContactUs";
+import Productions from "./sections/Productions";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
+
+const sections = [
+  { id: "about", Component: <AboutUs /> },
+  { id: "mission", Component: <Mission /> },
+  { id: "services", Component: <OurService /> },
+  { id: "buyers", Component: <OurBuyers /> },
+  { id: "products", Component: <Products /> },
+  { id: "quality", Component: <Quality /> },
+  { id: "productions", Component: <Productions /> },
+  { id: "sustainability", Component: <Sustainability /> },
+  { id: "management", Component: <Management /> },
+  { id: "contact", Component: <ContactUs /> },
+];
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-
-      <AboutUs />
-
-      <Mission/>
-
-      <OurService />
-
-      <motion.section
-        id="ourbuyers"
-        className="h-screen snap-start flex justify-center items-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={sectionVariants}
-      >
-        <OurBuyers />
-      </motion.section>
-
-      <Products />
-
-      <Quality />
-
-      <Productions />
-
-      <Sustainability />
-      
-      <ContactUs />
+      {sections.map(({ id, Component }, i) => (
+        <motion.section
+          key={id}
+          id={id}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={sectionVariants}
+          className="min-h-screen w-full bg-white snap-start snap-always scroll-smooth"
+        >
+          {Component}
+        </motion.section>
+      ))}
     </>
   );
 }
+

@@ -31,7 +31,7 @@ export default function AboutUs() {
   const sectionRef = useRef(null);
 
   return (
-    <section
+    <div
       ref={sectionRef}
       id="about"
       className="relative h-screen w-full bg-white flex items-center justify-center p-6 md:p-12 overflow-hidden snap-start"
@@ -45,7 +45,7 @@ export default function AboutUs() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

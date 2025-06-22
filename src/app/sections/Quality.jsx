@@ -62,7 +62,7 @@ export default function Quality() {
             delay: index * 0.2,
             scrollTrigger: {
               trigger: el,
-              start: "top 120%",
+              start: "top 80%",
             },
           }
         );
@@ -70,7 +70,7 @@ export default function Quality() {
     }, []);
 
   return (
-    <section ref={sectionRef} id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28 snap-start">
+    <div ref={sectionRef} id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28 snap-start">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -126,7 +126,7 @@ export default function Quality() {
             ))}
         </div>
       </motion.div>
-    </section>
+    </div>
   );
 }
 

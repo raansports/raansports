@@ -8,16 +8,17 @@ import { Menu, X } from "lucide-react"; // Icons for hamburger
 import Logo from "../../public/logo/Logo.png";
 
 const links = [
-  { href: "#home", label: "Home" }, //done
-  { href: "#about", label: "About Us" }, //done
-  { href: "#mission", label: "Mission & Vision" }, //done
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About Us" },
+  { href: "#mission", label: "Mission & Vision" },
   { href: "#services", label: "Our Services" },
-  { href: "#ourbuyers", label: "Our Buyers" }, //done
+  { href: "#ourbuyers", label: "Our Buyers" },
   { href: "#products", label: "Products" },
   { href: "#quality", label: "Quality" },
   { href: "#productions", label: "Productions" },
   { href: "#sustainability", label: "Sustainability" },
-  { href: "#contact", label: "Contact Us" }, //almost done
+  { href: "#management", label: "Management" },
+  { href: "#contact", label: "Contact Us" }, 
 ];
 
 function Header() {
