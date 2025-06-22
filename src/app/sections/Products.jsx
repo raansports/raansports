@@ -1,37 +1,10 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
 import Image from "next/image";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Products = () => {
-  const sectionRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
-
-  useEffect(() => {
-    const cards = sectionRef.current.querySelectorAll(".fade-in");
-
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          delay: index * 0.1,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%",
-          },
-        }
-      );
-    });
-  }, []);
 
   const productCategories = [
     {
@@ -65,26 +38,43 @@ const Products = () => {
     },
   ];
 
+  const variants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <div
       id="products"
-      ref={sectionRef}
       className="min-h-screen py-28 px-4 md:pt-28 lg:px-20  snap-start"
     >
-      <div className="text-center mb-16">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
         <h2 className="text-6xl md:text-9xl font-extrabold text-blue-950 max mb-2">
           Our Products
         </h2>
         <p className="text-lg md:text-md text-gray-600 max-w-3xl mx-auto">
           Explore our diverse range of garments crafted for men, women, and kids.
         </p>
-      </div>
+      </motion.div>
 
       <div className="space-y-24 px-3 md:px-0 center flex-col">
         {productCategories.map((category, index) => (
-          <div
+          <motion.div
             key={index}
-            className="grid md:grid-cols-2 gap-7  fade-in  "
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={variants}
+            className="grid md:grid-cols-2 gap-7"
           >
             <div className="space-y-1">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -97,8 +87,12 @@ const Products = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {category.items.map((item, i) => (
-                <div
+                <motion.div
                   key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={variants}
                   className="relative overflow-hidden rounded-xl shadow-md cursor-pointer"
                   onClick={() => setSelectedImage(item.src)}
                 >
@@ -112,10 +106,10 @@ const Products = () => {
                   <div className="absolute bottom-0 w-full text-center text-white text-sm font-medium bg-gradient-to-t  from-black/100 via-black/50 to-transparent pt-7 pb-2">
                     {item.name}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
@@ -146,3 +140,4 @@ const Products = () => {
 };
 
 export default Products;
+

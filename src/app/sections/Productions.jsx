@@ -81,7 +81,7 @@ export default function Productions() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className=" bg-white px-6 md:px-20 py-28 snap-start"
+      className=" bg-white px-6 md:px-20 pt-28 pb-32 snap-start"
       id="productions"
     >
       <h1 className="text-6xl md:text-9xl font-bold text-center text-blue-950 max">
@@ -149,7 +149,7 @@ export default function Productions() {
         ))}
       </motion.div>
 
-      
+
     </motion.div>
   );
 }

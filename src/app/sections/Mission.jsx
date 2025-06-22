@@ -1,48 +1,23 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { motion } from "framer-motion";
+import React from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export default function Mission() {
-  const sectionRef = useRef(null);
-  const missionRef = useRef(null);
-  const visionRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(missionRef.current, {
-        x: 50,
-        opacity: 0,
-        duration: 1.2,
-        scrollTrigger: {
-          trigger: missionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      gsap.from(visionRef.current, {
-        x: 50,
-        opacity: 0,
-        duration: 1.2,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: visionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <div
-      ref={sectionRef}
+    <motion.div
       id="mission"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
       className="min-h-screen md:h-screen snap-start bg-neutral-00 py-20 px-6 md:px-20 flex md:flex-row flex-col items-center gap-12 pt-28 overflow-hidden"
     >
       <h2 className="text-6xl md:text-9xl font-bold text-center text-blue-950 max-w-4xl max">
@@ -51,8 +26,10 @@ export default function Mission() {
 
       {/* Mission Card */}
       <div className="flex flex-col  justify-center items-center gap-6">
-        <div
-          ref={missionRef}
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
           className="bg-white rounded-3xl p-6 px md:p-10 max-w-5xl w-full flex flex-col gap-2 md:gap-4"
         >
           <h3 className="text-2xl md:text-3xl font-semibold text-amber-600">Our Mission</h3>
@@ -62,11 +39,13 @@ export default function Mission() {
             envision being the leading global apparel partner recognized for
             innovation, customer satisfaction, and environmental stewardship.
           </p>
-        </div>
+        </motion.div>
 
         {/* Vision Card */}
-        <div
-          ref={visionRef}
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
           className="bg-white rounded-3xl p-6 px md:p-10 max-w-5xl w-full flex flex-col gap-4"
         >
           <h3 className="text-2xl md:text-3xl font-semibold text-amber-600">Our Vision</h3>
@@ -76,8 +55,9 @@ export default function Mission() {
             encompasses expanding our international presence and contributing
             positively to the communities we serve.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
+
