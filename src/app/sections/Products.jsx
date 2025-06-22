@@ -26,7 +26,7 @@ const Products = () => {
           delay: index * 0.1,
           scrollTrigger: {
             trigger: card,
-            start: "top 100%",
+            start: "top 80%",
           },
         }
       );
@@ -66,7 +66,7 @@ const Products = () => {
   ];
 
   return (
-    <section
+    <div
       id="products"
       ref={sectionRef}
       className="min-h-screen py-28 px-4 md:pt-28 lg:px-20  snap-start"
@@ -141,7 +141,7 @@ const Products = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 };
 

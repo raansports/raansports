@@ -31,7 +31,7 @@ const Sustainability = () => {
   }, []);
 
   return (
-    <section
+    <div
       id="sustainability"
       ref={sectionRef}
       className="center flex flex-col h-auto min-h-screen px-4 md:px-10 lg:px-20 pt-28 snap-start "
@@ -104,7 +104,7 @@ const Sustainability = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

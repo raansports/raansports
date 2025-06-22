@@ -35,7 +35,7 @@ export default function OurBuyers() {
   const repeatedBuyers = [...buyers, ...buyers]; // Duplicate for loop
 
   return (
-    <section className="flex flex-col justify-center items-center h-screen w-full py-16 bg-neutral-100" id="buyers">
+    <div className="flex flex-col justify-center items-center h-screen w-full py-16 bg-neutral-100">
       <h2 className="text-4xl md:text-9xl font-bold text-center mb-10 text-blue-950 max">
         Our Buyers
       </h2>
@@ -60,6 +60,6 @@ export default function OurBuyers() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
