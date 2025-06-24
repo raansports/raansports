@@ -140,20 +140,19 @@ export default function OurServices() {
 
       {/* --- Manufacturing Unit Section --- */}
       <motion.div className="manufacturing-info mx-auto p-2 md:p-10 w-full">
-        <motion.h3 className="text-3xl md:text-7xl max font-extrabold text-amber-600 mb-12 text-center tracking-wide">
+        <motion.h3 className="text-4xl md:text-7xl max font-extrabold text-amber-600 mb-6 md:mb-12 text-center tracking-wide">
           Manufacturing Unit
         </motion.h3>
 
         {/* Card style summary */}
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2 md:mb-16">
+        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-2">
           <motion.div className="flex flex-col items-center justify-center bg-neutral-100 rounded-2xl p-6 pt-10">
             <FaBuilding className="text-5xl text-blue-600 mb-3" />
             <motion.h4 className="font-semibold text-lg mb-1 text-blue-800">
               Building Type
             </motion.h4>
-            <motion.p className="text-center text-gray-700 text-md md:text-xl font-bold my-2">
-              Unit-1: 7 storied RCC (Owned) <br />
-              Unit-2: 5 storied (Rented)
+            <motion.p className="text-center text-gray-700 text-2xl md:text-xl font-bold my-2">
+              7 storied RCC
             </motion.p>
           </motion.div>
 
@@ -164,9 +163,6 @@ export default function OurServices() {
             </motion.h4>
             <motion.p className="text-center text-gray-700 text-2xl font-bold my-2">
               40,500 SQFT
-            </motion.p>
-            <motion.p className="text-center text-gray-700 text-xs">
-              (Unit 1 - 28,000 SQFT, Unit 2 - 12,500 SQFT)
             </motion.p>
           </motion.div>
 
