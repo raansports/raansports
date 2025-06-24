@@ -50,7 +50,7 @@ const Products = () => {
   return (
     <div
       id="products"
-      className="min-h-screen py-28 px-4 md:pt-28 lg:px-20  snap-start"
+      className="min-h-screen py-28 px-4 md:pt-28 lg:px-20"
     >
       <motion.div
         initial="hidden"

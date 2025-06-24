@@ -18,7 +18,7 @@ export default function Mission() {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      className="min-h-screen md:h-screen snap-start bg-neutral-00 py-20 px-6 md:px-20 flex md:flex-row flex-col items-center gap-12 pt-28 overflow-hidden"
+      className="min-h-screen md:h-screen bg-neutral-00 py-20 px-6 md:px-20 flex md:flex-row flex-col items-center gap-12 pt-28 overflow-hidden"
     >
       <h2 className="text-6xl md:text-9xl font-bold text-center text-blue-950 max-w-4xl max">
         Mission & Vision

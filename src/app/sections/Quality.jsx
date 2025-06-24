@@ -70,7 +70,7 @@ export default function Quality() {
     }, []);
 
   return (
-    <div ref={sectionRef} id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28 snap-start">
+    <div ref={sectionRef} id="quality" className="min-h-screen bg-neutral-100 py-28 px-6 md:px-28">
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
