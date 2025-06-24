@@ -25,7 +25,7 @@ const sections = [
   { id: "about", Component: <AboutUs /> },
   { id: "mission", Component: <Mission /> },
   { id: "services", Component: <OurService /> },
-  { id: "buyers", Component: <OurBuyers /> },
+  { id: "ourbuyers", Component: <OurBuyers /> },
   { id: "products", Component: <Products /> },
   { id: "quality", Component: <Quality /> },
   { id: "productions", Component: <Productions /> },
