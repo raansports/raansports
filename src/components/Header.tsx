@@ -86,7 +86,7 @@ function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center space-x-6">
+        <ul className="hidden xl:flex items-center space-x-6">
           {links.map(({ href, label }) => (
             <motion.li key={href} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -106,7 +106,7 @@ function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-800 z-[10001]"
+          className="xl:hidden text-gray-800 z-[10001]"
         >
           {menuOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
@@ -120,7 +120,7 @@ function Header() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -200, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className={`md:hidden absolute left-0 right-0 bg-[rgba(255,255,255,0.4)] z-[10000] backdrop-blur-3xl shadow-md px-6 py-4 space-y-4 m-4 rounded-3xl  ${small ? "top-15" : "top-22"}`}
+            className={`xl:hidden absolute left-0 right-0 bg-[rgba(255,255,255,0.4)] z-[10000] backdrop-blur-3xl shadow-md px-6 py-4 space-y-4 m-4 rounded-3xl  ${small ? "top-15" : "top-22"}`}
           >
             {links.map(({ href, label }) => (
               <li key={href}>

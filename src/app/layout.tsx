@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import ManualLoader from "@/components/ManualLoader";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -27,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` regular ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` relative regular ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
-        {children}
-        <Footer />
+        <ManualLoader>
+          <Header />
+          {children}
+          <Footer />
+        </ManualLoader>
       </body>
     </html>
   );

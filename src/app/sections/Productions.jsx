@@ -92,7 +92,7 @@ export default function Productions() {
       <h2 className="text-sm md:text-2xl text-center font-semibold text-gray-700 mb-20">
         From Concept to Completion
       </h2>
-      <div className="relative border-l-4 border-neutral-200 pl-8 space-y-12 max-w-3xl mx-auto mb-24">
+      <div className="relative  pl-8 space-y-12 max-w-3xl mx-auto mb-24">
         {processSteps.map((step, i) => (
           <div key={i} className="timeline-step relative">
             <div className="absolute -left-6 top-0  text-white w-12 h-12 rounded-full flex items-center justify-center">

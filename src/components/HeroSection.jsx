@@ -13,7 +13,7 @@ const HeroSection = () => {
   const slides = ["/assets/H1.png", "/assets/H2.png", "/assets/H3.png", "/assets/H4.jpg"];
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 1200;
 
     const ctx = gsap.context(() => {
       if (isMobile) {
@@ -87,7 +87,7 @@ const HeroSection = () => {
       {/* Right-side slideshow */}
       <div
         ref={imagesWrapperRef}
-        className="absolute bottom-10 md:bottom-0 transform translate-y-120 md:translate-y-50 right-60 w-1/3 h-full flex z-[300]"
+        className="absolute bottom-10 md:bottom-0 transform translate-y-120 md:translate-y-10 lg:translate-y-50 right-60 w-1/3 h-full flex z-[300]"
         style={{ willChange: "transform" }}
       >
         {slides.map((src, index) => (
