@@ -34,7 +34,7 @@ const Sustainability = () => {
     <div
       id="sustainability"
       ref={sectionRef}
-      className="center flex flex-col h-auto min-h-screen px-4 md:px-10 lg:px-20 pt-28 snap-start "
+      className="center flex flex-col h-auto min-h-screen px-4 md:px-10 lg:px-20"
     >
       <div className="max-w-[1240px] mx-auto text-center mb-10 fade-in ">
         <h2 className="text-6xl md:text-9xl font-bold text-blue-950 mb-4 max">

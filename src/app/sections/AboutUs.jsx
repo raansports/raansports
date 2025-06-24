@@ -37,7 +37,7 @@ export default function AboutUs() {
     <div
       ref={sectionRef}
       id="about"
-      className="relative h-screen w-full bg-white flex items-center justify-center px-6 md:px-12 py-10 pt-28 overflow-hidden snap-start"
+      className="relative h-screen w-full bg-white flex items-center justify-center px-6 md:px-12 py-10 pt-28 overflow-hidden"
     >
       {/* Optional background pattern or blur */}
       <div className="absolute inset-0 opacity-5 backdrop-blur-3xl bg-[url('/assets/contact.png')] bg-center bg-cover pointer-events-none" />

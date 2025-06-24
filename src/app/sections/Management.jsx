@@ -36,7 +36,7 @@ function Management() {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.5 }}
-      className="center bg-white snap-start h-auto md:h-screen w-full pt-28"
+      className="center bg-white h-auto md:h-screen w-full pt-28"
     >
       <div className="container mx-auto px-6 md:px-12">
         <h1 className="text-6xl md:text-9xl font-bold text-center text-blue-950 mb-10 max">
